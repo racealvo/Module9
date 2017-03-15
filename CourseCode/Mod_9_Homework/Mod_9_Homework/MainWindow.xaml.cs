@@ -43,13 +43,14 @@ namespace Mod_9_Homework
         private void btnNext_Click(object sender, RoutedEventArgs e)
         {
             current++;
-            current = (current >= students.Count) ? students.Count - 1 : current;
+            current = (current >= students.Count) ? 0 : current;
             SetText();
         }
 
         private void btnPrevious_Click(object sender, RoutedEventArgs e)
         {
             current--;
+            current = (current < 0) ? students.Count-1 : current;
             current = (current < 0) ? 0 : current;
             SetText();
         }
