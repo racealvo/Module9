@@ -26,6 +26,8 @@ namespace Mod_9_Homework
         public MainWindow()
         {
             InitializeComponent();
+            btnNext.IsEnabled = false;
+            btnPrevious.IsEnabled = false;
         }
 
         private void btnCreateStudent_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,8 @@ namespace Mod_9_Homework
             txtCity.Clear();
 
             current = students.Count - 1;
+            btnNext.IsEnabled = true;
+            btnPrevious.IsEnabled = true;
         }
 
         private void btnNext_Click(object sender, RoutedEventArgs e)
